@@ -1,28 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Lay the Smacksown</title>
 </head>
-<body background="http://wallpapercave.com/wp/Qpxlaf4.jpg"> 
+<body background="http://il2.picdn.net/shutterstock/videos/598447/thumb/1.jpg"> 
+Welcome to the forum for all wrestling news and comments. Sumbit comments and posts below! 
+<style>
+.dropbtn {
+    background-color: #24a8e5;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #24a8e5;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+
+<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Shows</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#raw">Raw</a>
+    <a href="#about">Smackdown</a>
+    <a href="#contact">NXT</a>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 <style>
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
 </style>
 <body>
-
+<div style="background-color:black;color:white;padding:20px;">
 <table>
   <tr>
     <th>Championship</th>
@@ -38,7 +108,7 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>WWE Womens Championship</td>
-    <td>Charlotte</td>
+    <td>Sasha Banks</td>
   </tr>
   <tr>
     <td>Smackdown Womens Championship</td>
@@ -46,7 +116,7 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>Intercontinental Championship<rs/td>
-    <td>The Mz</td>
+    <td>Dolph Ziggler</td>
   </tr>
   <tr>
     <td>US Championship</td>
@@ -55,11 +125,11 @@ tr:nth-child(even) {
   <tr> 
     <td>Raw Tag Team Championships</td> 
     <td>The New Day</td> 
-  </tr> 
+  </tr>  
   <tr> 
     <td>Smackdown Tag Team Championships</td> 
     <td>Health Slater and Rhyno</td> 
-  </tr>
+  </tr> 
+  </div>
     </body> 
     </html>
-    
