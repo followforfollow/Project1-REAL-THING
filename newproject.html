@@ -12,33 +12,21 @@
 
 </head>
 
-<p><div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Shows</button>
-  <div id="myDropdown" class="dropdown-content">
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Shows</a>
+    <div class="dropdown-content">
     <a href="#raw">Raw</a>
     <a href="#smackdown">Smackdown</a>
     <a href="#nxt">NXT</a> 
 	<a class="active" href="hellinacell.html">Survivor Series</a>
-  </div>
-</div></p>
+    </div>
+  </li>
+</ul>
 
-<script>
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+
 <style>
 table {
     font-family: arial, sans-serif;
@@ -91,7 +79,8 @@ td, th {
 			</tr> 
 			</table>
 	</div>  
-<div>
+<div> 
+<img class="irc_mi i31an1t0xwKU-pQOPx8XEepE" alt="Image result for patrick star wrestling" style="margin-top: 108px;" src="http://images6.fanpop.com/image/photos/36900000/wrestling-bob-and-patrick-spongebob-squarepants-36926294-284-177.jpg" onload="google.aft&amp;&amp;google.aft(this)" width="284" height="177">
 	<p style="color:white">Do you have any comments? Do you have any opinions on the site? Post down below!</p> 
 	
 	<textarea rows="7" cols="50">       
@@ -99,3 +88,4 @@ td, th {
 	</div>
 </body>
 </html>
+
