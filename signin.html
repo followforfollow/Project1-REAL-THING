@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lay the SmackDown</title>
+<link rel="stylesheet" href="Style/main.css">
+</head> 
+<body>  
+<script src="js/login.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2>Javascript Login </h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+<span><b class="note"><b class="valid">User Name : Luca<br/>Password : Piccioni</b></span>
+
+<script>
+var attempt = 3; 
+function validate(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+		if ( username == "Luca" && password == "Piccioni"){
+		alert ("Welcome Luca!"); 
+
+return false;
+}
+else{
+attempt --;
+alert("Oops, you have the wrong username or password.");
+
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+
+
+</body>
+</html>
