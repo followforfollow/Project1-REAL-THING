@@ -12,37 +12,43 @@
 <div class="main">
 <h2>Javascript Login </h2>
 <form id="form_id" method="post" name="myform">
-<label>User Name :</label>
+<label>User Name :</label> 
+<!--This to allow you to type in the text boxes!-->
 <input type="text" name="username" id="username"/>
 <label>Password :</label>
-<input type="password" name="password" id="password"/>
-<input type="button" value="Login" id="submit" onclick="validate()"/>
-</form>
+<input type="password" name="password" id="password"/> 
+<!--Below links the function login() with the login button!-->
+<input type="button" value="Login" id="submit" onclick="login()"/>
+</form> 
+<!--Below, I set the correct usernames and passwords to Luca and Piccioni.!-->
 <span><b class="note"><b class="valid">User Name : Luca<br/>Password : Piccioni</b></span>
 
 <script>
 var attempt = 3; 
-function validate(){
+function login(){
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 		if ( username == "Luca" && password == "Piccioni"){
-		alert ("Welcome Luca!"); 
-
-return false;
+		alert ("Welcome Luca! Copy this link to get in the website: file:///H:/Documents/Project1-REAL-THING/newproject.html"); 
+/*If you get the password correct, the page will welcome you and send you to the website.*/
 }
 else{
-attempt --;
-alert("Oops, you have the wrong username or password.");
-
-if( attempt == 0){
-document.getElementById("username").disabled = true;
-document.getElementById("password").disabled = true;
-document.getElementById("submit").disabled = true;
-return false;
+	attempt --;
+	alert("Oops, you have the wrong username or password.");
+/*If you get the password wrong, the page lets you know you got the password wrong.*/
+if( attempt === 0){
+	document.getElementById("username").disabled = true;
+	document.getElementById("password").disabled = true;
+	document.getElementById("submit").disabled = true;
+ 
+if( attempt == 2){ 
+	alert("stop");
+} 
 }
 }
 }
 
 
+</script>
 </body>
 </html>
