@@ -13,27 +13,36 @@
 <h2>Javascript Login </h2>
 <form id="form_id" method="post" name="myform">
 <label>User Name :</label> 
-<!--This to allow you to type in the text boxes!-->
+<!--This below is to allow you to type in the text boxes!-->
 <input type="text" name="username" id="username"/>
 <label>Password :</label>
 <input type="password" name="password" id="password"/> 
 <!--Below links the function login() with the login button!-->
 <input type="button" value="Login" id="submit" onclick="login()"/>
 </form> 
-<!--Below, I set the correct usernames and passwords to Luca and Piccioni.!-->
-<span><b class="note"><b class="valid">User Name : Luca<br/>Password : Piccioni</b></span>
 
 <script>
 var attempt = 3; 
 function login(){
 	var username = document.getElementById("username").value;
-	var password = document.getElementById("password").value;
-	var guy = ["Luca","Kevin","Joe"];
-	if ( username == "Luca" && password == "Piccioni"){
-		alert("Hello. You are")
+	var password = document.getElementById("password").value; 
+/*The 2 arrays set below are the correct usernames and passwords. Var guy are the usernames, while var pass are the passwords.*/ 
+	var guy = ["Luca","Kevin","Joe"]; 
+	var pass = ["Piccioni", "12","34"];
+/*If you put Luca as the username and Piccioni as the password, the page will welcome you as Luca and send you to the website.*/
+	if ( username == guy[0] && password == pass[0]){
 		alert ("Welcome Luca! Copy this link to get in the website: file:///H:/Documents/Project1-REAL-THING/newproject.html"); 
+		} 
+/*If you put Kevin as the username and 12 as the password, the page will welcome you as Kevin and send you to the website.*/
+	else if (username == guy[1] && password == pass[1]){ 
+		alert ("Welcome Kevin! Copy this link to get in the website: file:///H:/Documents/Project1-REAL-THING/newproject.html");
+	    }  
+/*If you put Joe as the username and 34 as the password, the page will welcome you as Joe and send you to the website.*/
+	else if (username == guy[2] && password == pass[2]){ 
+		alert ("Welcome Joe! Copy this link to get in the website: file:///H:/Documents/Project1-REAL-THING/newproject.html");
+	    } 
 /*If you get the password correct, the page will welcome you and send you to the website.*/
-	}
+	
 	else{
 		attempt --;
 		alert("Oops, you have the wrong username or password.");
